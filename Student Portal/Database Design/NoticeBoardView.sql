@@ -1,0 +1,6 @@
+SELECT Noticeboard.MESSAGE,
+	(SELECT TO_CHAR(Noticeboard."Date", 'HH24:MM:SS') FROM Dual) "Time"
+	FROM NOTICEBOARD Noticeboard
+	WHERE
+	TRIM(TO_CHAR(NoticeBoard."Date", 'DD-MON-YY'))=TRIM((SELECT 	TO_CHAR(SYSDATE, 'DD-MON-YY') FROM DUAL))
+/
