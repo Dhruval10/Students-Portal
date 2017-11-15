@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+<TITLE>Student Portal</TITLE>
+
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<STYLE type="text/css">
+	body
+	{
+		background-color: white;
+		color: black;
+		text-align: left;
+		background-size:cover;                
+	}
+
+	.myFooter
+	{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background-color: black;
+		color: white;
+		text-align:center;
+	}
+
+</STYLE>
+</HEAD>
+
+<BODY background="http://localhost:8080/SEECS_Portal/wallpaper.jpg">
+ 
+<nav class="navbar navbar-default" role="navigation" style="background-color: #193A59;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" style="color:white; font-size: 30px; font-weight: 900;" href="#">SEECS Student Portal</a>
+    </div>
+    <form class="navbar-form navbar-right" role="search">
+       <button type="submit" formaction="http://localhost:8080/SEECS_Portal/servlets/admin/AdminPageServlet" class="btn btn-default"><span class="glyphicon glyphicon-home"></span> Home</button>
+       <button type="submit" formaction="http://localhost:8080/SEECS_Portal/servlets/admin/AdminUsersServlet" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Users</button>
+       <button type="submit" formaction="http://localhost:8080/SEECS_Portal/servlets/ForumsServlet" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Forums</button>
+       <button type="submit" formaction="http://localhost:8080/SEECS_Portal/servlets/admin/AdminScheduleServlet" class="btn btn-default"><span class="glyphicon glyphicon-time"></span> Schedule</button>
+       <button type="submit" formaction="http://localhost:8080/SEECS_Portal/servlets/admin/AdminSportsServlet" class="btn btn-default"><span class="glyphicon glyphicon-tower"></span> Sports</button>
+       <button type="submit" formaction="http://localhost:8080/SEECS_Portal/servlets/admin/AdminNoticeBoardServlet" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span> Notice Board</button>
+       <button type="submit" formaction="http://localhost:8080/SEECS_Portal/servlets/LogoutServlet" class="btn btn-default"><span class="glyphicon glyphicon-off"></span> Logout</button>
+    </form>   
+  </div>
+</nav>
+
+<br/><br/><br/><br/>
+
+<DIV class="container well">
+<FORM  method="post" action="http://localhost:8080/SEECS_Portal/servlets/admin/AddScheduleData">
+
+	<DIV class="row">
+		<DIV class="col-md-3">Class :</DIV>
+		<DIV class="col-md-3"></DIV>
+                <DIV class="col-md-3">
+                    <INPUT type="text" name="class">
+		</DIV>
+	</DIV>
+    
+        <DIV class="row">
+		<DIV class="col-md-3">Subject Code :</DIV>
+		<DIV class="col-md-3"></DIV>
+                <DIV class="col-md-3">
+                    <INPUT type="text" name="subjectCode">
+		</DIV>
+	</DIV>
+    
+        <DIV class="row">
+		<DIV class="col-md-3">Subject Name :</DIV>
+		<DIV class="col-md-3"></DIV>
+                <DIV class="col-md-3">
+                    <INPUT type="text" name="subject">
+		</DIV>
+	</DIV>
+    
+        <DIV class="row">
+		<DIV class="col-md-3">Time Slot :</DIV>
+		<DIV class="col-md-3"></DIV>
+                <DIV class="col-md-3">
+                    <INPUT type="text" name="timeslot">
+		</DIV>
+	</DIV>
+    
+        <DIV class="row">
+		<DIV class="col-md-3">Class Room #</DIV>
+		<DIV class="col-md-3"></DIV>
+                <DIV class="col-md-3">
+                    <INPUT type="text" name="classroom">
+		</DIV>
+	</DIV>
+    
+        <DIV class="row">
+		<DIV class="col-md-3">Day :</DIV>
+		<DIV class="col-md-3"></DIV>
+                <DIV class="col-md-3">
+                    <select name="day">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+		</DIV>
+	</DIV>
+
+	<DIV class="row"><br/></DIV>
+
+	<DIV class="row">
+		<DIV class="col-md-3"></DIV>
+		<DIV class="col-md-6" style="text-align: center">
+                    <INPUT type="submit" value="Add Routine Schedule">
+		</DIV>
+	</DIV>
+
+</FORM>
+</DIV>
+</BODY>
+
+</HTML>
